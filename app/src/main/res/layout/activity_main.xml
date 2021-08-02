@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".activities.MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/edtSearch"
+        android:hint="Nhập thông tin tìm kiếm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvStudent"
+        android:background="@drawable/border_backgr"
+        android:layout_below="@id/edtSearch"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"/>
+
+    <LinearLayout
+        android:id="@+id/layoutDesign"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_backgr"
+        android:layout_below="@id/rcvStudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Form nhập dữ liệu"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/edtName"
+            android:hint="Nhập họ tên"
+            android:textColor="#000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/edtYearOfBirth"
+            android:hint="Nhập năm sinh"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textColor="#000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/edtPhoneNumber"
+            android:hint="Nhập số điện thoại"
+            android:inputType="number"
+            android:maxLength="11"
+            android:textColor="#000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rdUniversity"
+                android:text="Đại học"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/rdCollege"
+                android:text="Cao đẳng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layoutButton"
+        android:layout_below="@id/layoutDesign"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:text="Thêm"
+            android:layout_alignParentBottom="true"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_alignParentBottom="true"
+            android:text="Sửa"
+            android:layout_toRightOf="@id/btnAdd"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnFilter"
+            android:text="Lọc"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@id/btnSearch"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnSort"
+            android:text="Sort"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnSearch"
+            android:text="Tìm"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+        <Button
+            android:id="@+id/btnDeleteFilter"
+            android:text="Xoá bộ lọc"
+            android:layout_below="@id/layoutButton"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</ScrollView>

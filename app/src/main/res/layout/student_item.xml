@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+    <TextView
+        android:id="@+id/tvStudentName"
+        android:text="Nguyễn Đức Điệp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvYearOfBirth"
+        android:text="Năm sinh: 2000"
+        android:layout_below="@id/tvStudentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvPhoneNumber"
+        android:layout_below="@id/tvYearOfBirth"
+        android:text="Số điện thoại: 0981206317"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvSpecialized"
+        android:layout_below="@id/tvPhoneNumber"
+        android:text="Chuyên nghành: Cao đẳng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvDelete"
+        android:layout_alignParentRight="true"
+        android:text="X"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <View
+        android:layout_width="match_parent"
+        android:background="#C1C1C1"
+        android:layout_below="@id/tvSpecialized"
+        android:layout_marginTop="10dp"
+        android:layout_height="1dp"/>
+</RelativeLayout>
